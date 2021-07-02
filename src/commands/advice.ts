@@ -3,7 +3,7 @@ import { getRandom } from "../scripts/random";
 
 export const command: Command = {
   name: "advice",
-  aliases: ["a", "adv"],
+  aliases: ["a", "adv", "tip"],
   desc: "Gives advice on demand.",
   run: async (client, message, args) => {
     await message.channel.send(getRandom(advice));
