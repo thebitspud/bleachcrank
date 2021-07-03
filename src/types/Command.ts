@@ -7,7 +7,8 @@ type Run = {
 
 export type Command = {
   name: string;
-  aliases: string[];
+  aliases?: string[];
+  category?: string;
   desc: string;
   run: Run;
 };

@@ -3,10 +3,9 @@ const fetch = require("node-fetch");
 
 export const command: Command = {
   name: "inspirobot",
-  aliases: ["i", "inspire", "inspiration", "inspiro"],
+  aliases: ["i", "inspire", "inspireme", "inspiration", "inspiro"],
   desc: "Generates and displays an Inspirobot image.",
   run: async (client, message, args) => {
-    console.log("sus");
     fetch(url)
       .then((res: Response) => res.text())
       .then((text: string) => message.channel.send(text));
