@@ -2,11 +2,14 @@ import Client from "./client";
 import ConfigJSON from "./config.json";
 import { setPosts } from "./commands/comedynecro";
 
-const bot = new Client();
+const client = new Client();
 
-bot.init().then();
+client.init().then();
 setPosts().then();
 
-bot.on("ready", () => {
-  bot.user?.setActivity(`${ConfigJSON.prefix}help`, { type: "PLAYING" });
+client.on("ready", () => {
+  if (client.user)
+    client.user
+      .setActivity(`${ConfigJSON.prefix}help`, { type: "PLAYING" })
+      .then();
 });

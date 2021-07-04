@@ -16,5 +16,5 @@ const advice = [
   "If you don't know what you're doing, then how can the enemy?",
   "We live in a society\n\nBottom text",
   "There are accidents.",
-  "Pro gamer tip: say amogus backwards and add balls at the end"
+  "Say amogus backwards and add balls at the end :sunglasses:",
 ];
