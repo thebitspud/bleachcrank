@@ -1,5 +1,5 @@
 import { Command } from "../types";
-import { getRandom } from "../scripts/random";
+import { getIndexOrRandom } from "../scripts/random";
 const fetch = require("node-fetch");
 
 export const command: Command = {
@@ -16,7 +16,7 @@ export const command: Command = {
   ],
   desc: "Fetches an image meme from r/comedynecrophilia.",
   run: async (client, message, args) => {
-    await message.channel.send(getRandom(posts));
+    await message.channel.send(getIndexOrRandom(posts, args));
   },
 };
 

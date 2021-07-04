@@ -18,5 +18,6 @@ export const event: Event = {
 
     const command = client.commands.get(key) || client.aliases.get(key);
     if (command) (command as Command).run(client, message, args);
+    else message.channel.send("Invalid request. Type --help for a list of commands.");
   },
 };

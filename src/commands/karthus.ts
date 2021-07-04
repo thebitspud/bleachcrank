@@ -16,6 +16,7 @@ const text =
   "*Mana Cost:* 100\n" +
   "*Cooldown:* 200 / 180 / 160\n" +
   "\n" +
-  "**Active**: Karthus recites Quran for 3 seconds then deals حلال damage to all targetable enemy champions upon its completion.\n" +
+  "**Active**: Karthus recites Quran for 3 seconds then deals حلال damage to all targetable enemy champions upon its " +
+  "completion.\n" +
   "\n" +
   "*Damage:* 200 / 350 / 500 (+75% AP)";

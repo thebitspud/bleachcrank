@@ -1,29 +1,23 @@
 import { Command } from "../types";
-import { getRandom } from "../scripts/random";
+import { getIndexOrRandom } from "../scripts/random";
 
 export const command: Command = {
   name: "amongcock",
   aliases: [
     "amonguscock",
     "amonguscockbot",
+    "u/amonguscockbot",
     "amongus",
     "among",
     "amoguscockbot",
     "amoguscock",
     "amogus",
+    "cock",
     "8",
   ],
   desc: "Sends an among us cock :flushed:",
   run: async (client, message, args) => {
-    if (args.length > 0) {
-      const index = parseInt(args[0]);
-      if (index < text.length) {
-        await message.channel.send(text[index]);
-        return;
-      }
-    }
-
-    await message.channel.send(getRandom(text));
+    await message.channel.send(getIndexOrRandom(text, args));
   },
 };
 
@@ -40,7 +34,7 @@ const text = [
     "⠈⠻⠶⣿⣿⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⢸⣿⣿⣿⣿\n" +
     "⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⢸⣿⣿⣿⣿\n" +
     "⠀⠀⠀⠀⢿⣧⣀⣠⣴⡿⠙⠛⠿⠿⠿⠿⠉⠀⠀⠀⢠⣿⣿⣿⣿⠇\n" +
-    "⠀⠀⠀⠀⠀⢈⣩⣭⣥⣤⣤⣤⣤⣤⣤⣤⣤⣤⣶⣿⣿⣿⣿⣿⠏⠀\n" +
+    "⠀⠀⠀⠀⠀⢈⣩⣭⣥⣤⣤⣤⣤⣭⣭⣤⣤⣤⣶⣿⣿⣿⣿⣿⠏⠀\n" +
     "⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀\n" +
     "⠀⠀⠀⢸⣿⣿⣿⡟⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠋⠁⠀⠀⠀⠀\n" +
     "⠀⠀⠀⢸⣿⣿⣿⣷⣄⣀⣀⣀⣀⣀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀\n" +
