@@ -1,11 +1,11 @@
 import Client from "./client";
 import ConfigJSON from "./config.json";
-import { setPosts } from "./commands/comedynecro";
+import { setPosts as setCNPosts } from "./commands/comedynecro";
 
 const client = new Client();
 
 client.init().then();
-setPosts().then();
+setCNPosts().then();
 
 client.on("ready", () => {
   if (client.user)

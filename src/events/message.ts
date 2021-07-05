@@ -6,44 +6,44 @@ export const event: Event = {
   run: (client, message: Message) => {
     if (message.author.bot) return;
     if (!message.guild) return;
+    if (!client.user || !message.mentions.has(client.user))
+      if (!message.content.startsWith(client.config.prefix)) return;
 
-    let args;
-    if (client.user && message.mentions.has(client.user)) {
-      args = Util.cleanContent(message.content, message)
-        .toLowerCase()
-        .trim()
-        .split(" ")
-        .filter((arg) => arg.length > 0 && !arg.startsWith("@"));
+    // Tidying up given command arguments
+    let args = Util.cleanContent(message.content, message)
+      .toLowerCase()
+      .split(" ")
+      .filter((arg) => arg.length && !arg.startsWith("@"));
 
-      // Quick fix for removing prefix if bot is pinged
-      if (args[0] && args[0].startsWith(client.config.prefix))
+    // Removing prefix from the command if necessary
+    if (args[0]) {
+      if (args[0].startsWith(client.config.prefix)) {
         args[0] = args[0].slice(client.config.prefix.length);
-    } else if (message.content.startsWith(client.config.prefix)) {
-      args = message.content
-        .slice(client.config.prefix.length)
-        .toLowerCase()
-        .trim()
-        .split(" ")
-        .filter((arg) => arg.length > 0);
-    } else return;
+        if (!args[0].length) args.shift();
+      }
 
+      if (args[0].startsWith("r/") && args[0].length > 2) {
+        args[0] = args[0].slice(2);
+        args.unshift("r/");
+      }
+    }
+
+    // Getting the command key, and returning an error if none exists
     let key = args.shift();
-    if (!key)
-      return message.channel
-        .send(
-          "I cannot process empty requests.\nType --help for a list of valid commands."
-        )
-        .then();
+    if (!key) {
+      message.channel.send(`${emptyError}\n${helpReminder}`).then();
+      return;
+    }
 
-    console.log(message.author.tag + ": " + args);
+    console.log(`${message.author.tag}: --${key} ${args}`);
 
+    // Retrieving and executing the command
     const command = client.commands.get(key) || client.aliases.get(key);
     if (command) (command as Command).run(client, message, args);
-    else
-      message.channel
-        .send(
-          "I cannot help you with that.\nType --help for a list of valid commands."
-        )
-        .then();
+    else message.channel.send(`${invalidError}\n${helpReminder}`).then();
   },
 };
+
+const emptyError = "I cannot process empty requests.";
+const invalidError = "I cannot help you with that.";
+const helpReminder = "Type --help for a list of valid commands.";
