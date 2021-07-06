@@ -20,7 +20,9 @@
   "dependencies": {
     "discord.js": "^12.5.3",
     "moment": "^2.29.1",
+    "node": "^16.4.0",
     "node-fetch": "^2.6.1",
+    "npm": "^7.19.1",
     "prettier": "^2.3.2",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.3.5"
