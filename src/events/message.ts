@@ -36,7 +36,9 @@ export const event: Event = {
       return;
     }
 
-    console.log(`${message.author.tag}: --${key} ${args}`);
+    console.log(
+      `${message.author.tag} [${message.guild.name}]: --${key} ${args}`
+    );
 
     // Retrieving and executing the command
     const command = client.commands.get(key) || client.aliases.get(key);

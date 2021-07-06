@@ -4,7 +4,7 @@ import moment from "moment";
 
 export const command: Command = {
   name: "serverinfo",
-  aliases: ["serverinformation", "server", "s"],
+  aliases: ["serverinformation", "server", "s", "si", "sinfo"],
   desc: "Returns the server's information card.",
   run: async (client, message, args) => {
     if (!client.user) return;

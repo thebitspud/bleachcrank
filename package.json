@@ -1,6 +1,6 @@
 {
   "name": "bleachcrank",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "kinda quirky discord bot",
   "main": "src/index.ts",
   "scripts": {

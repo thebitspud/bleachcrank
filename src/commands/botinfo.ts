@@ -5,7 +5,15 @@ import ConfigJSON from "../config.json";
 
 export const command: Command = {
   name: "botinfo",
-  aliases: ["botinformation", "bot", "b", "bleachcrank", "about"],
+  aliases: [
+    "botinformation",
+    "bot",
+    "b",
+    "bi",
+    "binfo",
+    "bleachcrank",
+    "about",
+  ],
   desc: "Returns the bot's information card.",
   run: async (client, message, args) => {
     if (!client.user) return;
@@ -24,7 +32,7 @@ export const command: Command = {
         { name: "Creator", value: "intonomist#9642" },
         {
           name: "Version",
-          value: `${PackageJSON.version} [July 5th 2021]`,
+          value: `${PackageJSON.version} [July 6th 2021]`,
         },
         {
           name: "Made With",
