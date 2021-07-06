@@ -24,6 +24,8 @@ export const command: Command = {
       .then((res: Response) => res.json())
       .then((json: any) => json.data.children.map((e: any) => e.data.url));
 
+    // Removing the used argument
+    args.shift();
     await message.channel.send(getIndexOrRandom(posts, args));
   },
 };

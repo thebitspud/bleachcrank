@@ -19,6 +19,7 @@
   "homepage": "https://github.com/thebitspud/bleachcrank#readme",
   "dependencies": {
     "discord.js": "^12.5.3",
+    "moment": "^2.29.1",
     "node-fetch": "^2.6.1",
     "prettier": "^2.3.2",
     "ts-node-dev": "^1.1.8",

@@ -22,6 +22,7 @@ export const event: Event = {
         if (!args[0].length) args.shift();
       }
 
+      // Fixing unspaced reddit commands
       if (args[0].startsWith("r/") && args[0].length > 2) {
         args[0] = args[0].slice(2);
         args.unshift("r/");
@@ -39,7 +40,12 @@ export const event: Event = {
 
     // Retrieving and executing the command
     const command = client.commands.get(key) || client.aliases.get(key);
-    if (command) (command as Command).run(client, message, args);
+    if (command)
+      try {
+        (command as Command).run(client, message, args);
+      } catch {
+        console.log("Error: command execution failed");
+      }
     else message.channel.send(`${invalidError}\n${helpReminder}`).then();
   },
 };

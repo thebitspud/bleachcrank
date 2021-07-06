@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12b5dbd3-b77a-4358-b145-5505d4833f70" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/events/join.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/karthus.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/karthus.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/reddit.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/reddit.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events/message.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/message.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/ready.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/ready.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +35,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1urr5npnH8DXUWAtuXfYsxa7wyA" />
   <component name="ProjectViewState">
@@ -59,7 +69,8 @@
       <option name="presentableId" value="Default" />
       <updated>1625434371631</updated>
       <workItem from="1625434375825" duration="4471000" />
-      <workItem from="1625452514498" duration="9192000" />
+      <workItem from="1625452514498" duration="10863000" />
+      <workItem from="1625530499364" duration="13636000" />
     </task>
     <servers />
   </component>
@@ -76,6 +87,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

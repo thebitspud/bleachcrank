@@ -10,12 +10,15 @@ class ExtendedClient extends Client {
   public events: Collection<string, Event> = new Collection();
   public config: Config = ConfigJSON;
   public aliases: Collection<string, Command> = new Collection();
+  public totalCommands = 0;
 
   public async init() {
     await this.login(this.config.token);
 
     /* Commands */
     const commandPath = path.join(__dirname, "..", "commands");
+    this.totalCommands = readdirSync(commandPath).length;
+
     for (const file of readdirSync(commandPath)) {
       const { command } = require(`${commandPath}/${file}`);
       this.commands.set(command.name, command);

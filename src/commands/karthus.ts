@@ -3,14 +3,14 @@ import { Command } from "../types";
 export const command: Command = {
   name: "karthus",
   aliases: ["karth", "requiem"],
-  desc: "Recites Quran for 3 seconds.",
+  desc: "Requiem halal",
   run: async (client, message, args) => {
     await message.channel.send(text);
   },
 };
 
 const text =
-  "**Karthus - R: Requiem**\n" +
+  "**Requiem**\n" +
   "*Effect Radius:* Global\n" +
   "*Cast Time:* 0.25\n" +
   "*Mana Cost:* 100\n" +
