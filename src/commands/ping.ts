@@ -7,7 +7,7 @@ export const command: Command = {
   run: async (client, message, args) => {
     const userPing = `Response time: ${client.ws.ping} ms`;
 
-    if (args.length > 0) {
+    if (args.length) {
       if (args[0] === "cock" || args[0] === "c" || args[0] === "nice") {
         await message.channel.send(altText + userPing);
         return;

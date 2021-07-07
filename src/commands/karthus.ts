@@ -3,7 +3,7 @@ import { Command } from "../types";
 export const command: Command = {
   name: "karthus",
   aliases: ["karth", "requiem"],
-  desc: "Requiem",
+  desc: "What does his R do??",
   run: async (client, message, args) => {
     await message.channel.send(text);
   },

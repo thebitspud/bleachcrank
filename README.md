@@ -6,4 +6,4 @@ A meme-themed discord bot that sports a variety of "interesting" commands
 is kinda quirky :flushed:
 
 ## Invite Link
-[Click here](https://discord.com/api/oauth2/authorize?client_id=445376848235331604&permissions=305777873&scope=bot)
+[Click here](https://discord.com/oauth2/authorize?client_id=445376848235331604&permissions=36719680&scope=bot)

@@ -8,8 +8,7 @@ client.init().then();
 setCNPosts().then();
 
 client.on("ready", () => {
-  if (client.user)
-    client.user
-      .setActivity(`${ConfigJSON.prefix}help`, { type: "PLAYING" })
-      .then();
+  client.user
+    ?.setActivity(`${ConfigJSON.prefix}help`, { type: "PLAYING" })
+    .then();
 });

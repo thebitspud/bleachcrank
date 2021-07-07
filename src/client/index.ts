@@ -23,7 +23,7 @@ class ExtendedClient extends Client {
       const { command } = require(`${commandPath}/${file}`);
       this.commands.set(command.name, command);
 
-      if (command.aliases && command.aliases.length > 0) {
+      if (command.aliases?.length) {
         command.aliases.forEach((alias: string) => {
           this.aliases.set(alias, command);
         });

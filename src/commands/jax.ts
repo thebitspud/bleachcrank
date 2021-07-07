@@ -6,7 +6,7 @@ export const command: Command = {
   aliases: ["jack", "jacks", "jacques"],
   desc: "HNNNNGRGGG JAX GROW",
   run: async (client, message, args) => {
-    if (args.length > 0) {
+    if (args.length) {
       switch (args[0]) {
         case "e":
           await message.channel.send(text[0]);

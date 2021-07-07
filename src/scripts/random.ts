@@ -12,7 +12,7 @@ export function getRandom(arr: any[]) {
  * @param args: message arguments (passed down from command)
  */
 export function getIndexOrRandom(arr: any[], args: string[]) {
-  if (args.length > 0) {
+  if (args.length) {
     const index = parseInt(args[0]);
     if (index >= 0 && index < arr.length) {
       return arr[index];

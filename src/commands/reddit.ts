@@ -8,7 +8,7 @@ export const command: Command = {
   desc: "Fetches a random post from the specified subreddit.",
   run: async (client, message, args) => {
     // Handling invalid request formats
-    if (!args[0]) return message.channel.send(noArgsError);
+    if (!args.length) return message.channel.send(noArgsError);
     if (args[0].endsWith("/")) args[0].slice(0, -1);
 
     const fetchTest = await fetch(urlTest(args[0])).then((res: Response) =>

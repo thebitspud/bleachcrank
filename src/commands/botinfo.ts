@@ -32,7 +32,7 @@ export const command: Command = {
         { name: "Creator", value: "intonomist#9642" },
         {
           name: "Version",
-          value: `${PackageJSON.version} [July 6th 2021]`,
+          value: `${PackageJSON.version} [July 7th 2021]`,
         },
         {
           name: "Made With",

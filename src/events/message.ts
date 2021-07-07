@@ -15,8 +15,8 @@ export const event: Event = {
       .split(" ")
       .filter((arg) => arg.length && !arg.startsWith("@"));
 
-    // Removing prefix from the command if necessary
     if (args[0]) {
+      // Removing prefix from the command if necessary
       if (args[0].startsWith(client.config.prefix)) {
         args[0] = args[0].slice(client.config.prefix.length);
         if (!args[0].length) args.shift();
